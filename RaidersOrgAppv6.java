@@ -210,7 +210,7 @@ public class RaidersOrgAppv6 {
         String[] effectiveCols = cols;
         boolean hasWiki = false;
 
-        // Decide if this table should have wiki links
+        // LT added wiki feature
         if (title.equals("Active Player Roster")) {
             effectiveData = addWikiColumnForPlayers(data);
             effectiveCols = new String[]{cols[0], cols[1], cols[2], cols[3], "Wiki"};
@@ -243,8 +243,8 @@ public class RaidersOrgAppv6 {
     @Override
     public void mouseClicked(MouseEvent e) {
 
-        boolean leftDouble = SwingUtilities.isLeftMouseButton(e) && e.getClickCount() == 2;
-        boolean rightSingle = SwingUtilities.isRightMouseButton(e) && e.getClickCount() == 1;
+        boolean leftDouble = SwingUtilities.isLeftMouseButton(e) && e.getClickCount() == 2; 
+        boolean rightSingle = SwingUtilities.isRightMouseButton(e) && e.getClickCount() == 1; // LT added right click to pull up wiki code
 
         if (leftDouble || rightSingle) {
             int row = table.rowAtPoint(e.getPoint());
