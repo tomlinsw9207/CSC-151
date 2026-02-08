@@ -7,7 +7,7 @@ import java.net.URLConnection;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-public class RaidersOrgAppv6 {
+public class GroupProject_01 {
     private JFrame frame;
     private JPanel mainContent;
     private CardLayout cardLayout;
@@ -15,7 +15,7 @@ public class RaidersOrgAppv6 {
     private final Color RAIDERS_SILVER = new Color(165, 172, 175);
     private final Color RAIDERS_BLACK = new Color(0, 0, 0);
 
-    public RaidersOrgAppv6() {
+    public GroupProject_01() {
         frame = new JFrame("Las Vegas Raiders - Organization Dashboard");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200, 800);
@@ -297,6 +297,7 @@ public class RaidersOrgAppv6 {
     }
 
     // Map player names to Wikipedia URLs (only if they actually have pages)
+    // LT added with help from AI, and manually entered players and wikis that were missed in the generated code
     private String getPlayerWiki(String name) {
         switch (name) {
             case "Ashton Jeanty":
@@ -427,6 +428,6 @@ public class RaidersOrgAppv6 {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(RaidersOrgAppv6::new);
+        SwingUtilities.invokeLater(GroupProject_01::new);
     }
 }
